@@ -10,13 +10,14 @@ server.use(middlewares)
 
 server.use((req, res, next) => {
 
-  console.log(req.headers);
-
+  // console.log(req.headers);
 
   if(req.method === "POST" && req.path === "/auth") {
    next();
-  } else if(req.headers.authorization === `Bearer ${secret}`) {
-  next()
+  } 
+  else if (req.headers.authorization === `Bearer ${secret}`) {
+    console.log('qqqqqq',req.headers);
+  next();
   } else {
   res.sendStatus(401)
   }
@@ -24,11 +25,10 @@ server.use((req, res, next) => {
 
 
 server.post('/auth', (req, res) => {
-
   if (
     req.body.email === 'maria@gmail.com' &&
     req.body.password === '123456') {
-        console.log(req.body)
+        console.log('hey',req.body)
     res.jsonp({
       token: secret
     })
@@ -39,3 +39,7 @@ server.use(router)
 server.listen(3001, () => {
   console.log('JSON Server is running')
 })
+
+// const datos = router.db.value()
+// console.log('aqui', datos.user)
+// console.log('aqui', datos.products)

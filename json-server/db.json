@@ -5,5 +5,139 @@
     "comments": [
       { "id": 1, "body": "some comment", "postId": 1 }
     ],
-    "profile": { "name": "typicode" }
+    "profile": { "name": "typicode" },
+
+    "user": [
+      {
+        "_id": "1",
+        "email": "maria@gmail.com",
+        "password": "123456",
+        "nombre": "Maria Fernandez",
+        "roles": "waiter",
+        "admin": false
+      },
+      {
+        "_id": "2",
+        "email": "mariano@gmail.com",
+        "password": "123456",
+        "nombre": "Mariano Fernandez",
+        "roles":"waiter",
+        "admin": false
+      },
+      {
+        "_id": "3",
+        "email": "mario@gmail.com",
+        "password": "123456",
+        "nombre": "Mario Fernandez",
+        "roles":"chef",
+        "admin": false
+      },
+      {
+        "_id": "4",
+        "email": "mariana@gmail.com",
+        "password": "123456",
+        "nombre": "Mariana Fernandez",
+        "roles": "administrador",
+        "admin": true
+      }
+    ],
+    "products": [
+      {
+        "_id": "1",
+        "name": "Café americano",
+        "price": 5,
+        "image": "https://cdn-icons-png.flaticon.com/512/3361/3361135.png",
+        "type": "desayuno",
+        "dateEntry": ""
+      },
+      {
+        "_id": "2",
+        "name": "Café con leche",
+        "price": 7,
+        "image": "https://cdn-icons-png.flaticon.com/512/1485/1485863.png",
+        "type": "desayuno",
+        "dateEntry": ""
+      },
+      {
+        "_id": "3",
+        "name": "Sandwich de jamón y queso",
+        "price": 10,
+        "image": "https://cdn-icons-png.flaticon.com/512/1625/1625062.png",
+        "type": "desayuno",
+        "dateEntry": ""
+      },
+      {
+        "_id": "4",
+        "name": "Jugo de frutas natural",
+        "price": 7,
+        "image": "https://cdn-icons-png.flaticon.com/512/3258/3258200.png",
+        "type": "desayuno",
+        "dateEntry": ""
+      },
+      {
+        "_id": "5",
+        "name": "Hamburguesa simple",
+        "price": 10,
+        "image": "https://cdn-icons-png.flaticon.com/512/2617/2617019.png",
+        "type": "tentempié",
+        "dateEntry": ""
+      },
+      {
+        "_id": "6",
+        "name": "Hamburguesa doble",
+        "price": 15,
+        "image": "https://cdn-icons-png.flaticon.com/512/4459/4459373.png",
+        "type": "tentempié",
+        "dateEntry": ""
+      },
+      {
+        "_id": "7",
+        "name": "Papas fritas",
+        "price": 5,
+        "image": "https://cdn-icons-png.flaticon.com/512/5787/5787020.png",
+        "type": "tentempié",
+        "dateEntry": ""
+      },
+      {
+        "_id": "8",
+        "name": "Aros de cebolla",
+        "price": 5,
+        "image": "https://cdn-icons-png.flaticon.com/512/3351/3351055.png",
+        "type": "tentempié",
+        "dateEntry": ""
+      },
+      {
+        "_id": "9",
+        "name": "Agua 500ml",
+        "price": 5,
+        "image": "https://cdn-icons-png.flaticon.com/512/8008/8008926.png",
+        "type": "tentempié",
+        "dateEntry": ""
+      },
+      {
+        "_id": "10",
+        "name": "Agua 750ml",
+        "price": 7,
+        "image": "https://cdn-icons-png.flaticon.com/512/3629/3629850.png",
+        "type": "tentempié",
+        "dateEntry": ""
+      },
+      {
+        "_id": "11",
+        "name": "Bebida/gaseosa 500ml",
+        "price": 7,
+        "image": "https://cdn-icons-png.flaticon.com/512/1046/1046782.png",
+        "type": "tentempié",
+        "dateEntry": ""
+      },
+      {
+        "_id": "12",
+        "name": "Bebida/gaseosa 750ml",
+        "price": 10,
+        "image": "https://cdn-icons-png.flaticon.com/512/920/920592.png",
+        "type": "tentempié",
+        "dateEntry": ""
+      }
+    ]
+    
   }

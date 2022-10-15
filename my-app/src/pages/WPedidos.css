@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /*Bordes de las cajas por dentro*/
+    font-size: 62.5%;
+    /*Reseteando los tamaños de fuente para que 1 rem sea igual a 10px*/
+  
+  
+  }
+  
+  
+  
+  
+  
+  .headerViews {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 2%;
+    background-color: BLACK;
+    color: white;
+  }
+  
+  .waiterBody {
+    background-color: rgb(217, 191, 181); 
+    /* background-image: url('../assets/fondoRosa.jpg') ; */
+    display: flex;
+    flex-direction: row;
+    padding: 1.5% 2.5% 0.5% 0.5%;
+    justify-content: space-between;
+   
+  }
+  
+  .waiterOptions {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;  /* no ocupe todo el espacio de forma horizontal*/
+    padding: 5% 0%;
+  }
+  
+  .waiterButtons {
+    background-color: rgba(48, 31, 16, 1);
+    color: aliceblue;
+    padding: 1.5%;
+    transform: rotate(270deg);
+    font-size: 10px;
+    border-radius: 6px;
+  }
+  
+  .waiterContainer {
+    background-color: rgba(48, 31, 16, 1);
+    width: 450px;
+    height: 600px;
+  }
+  .typeMenu{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: rgba(48, 31, 16, 1);
+    color: aliceblue;
+    padding: 1.5% 30%;
+    font-size: 10px;
+    border-radius: 6px;
+  }
+  
+  .waiterMenu{
+    background-color:rgba(101, 42, 27, 1);
+    border-radius: 6px;
+    padding: 2.5%;
+    width: 100px;
+    color: aliceblue;
+    font-size: 10px;
+  
+  }
+  
+  .menuConstainer{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 2.5%;
+  }
+  .product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(160, 134, 123, 1);
+    width: 100px;
+    height: 130px;
+    color: aliceblue;
+    font-size: 10px;
+    border-radius: 6px;
+    border-color: rgb(239, 239, 245);
+  
+  
+  }
+  .productName{
+    background-color: rgba(103, 87, 65, 1);
+    border-radius: 4px;
+    padding: 5.5%;
+    font-size: 10px;
+  }
+  
+  .productCost{
+  
+    color: aliceblue;
+    font-size: 12px;
+  }
+  
+  img {
+    max-width: 80%;
+    max-height: 80%;
+   }
+  .imgProduct{
+   
+    border-radius: 4px;
+    padding: 4.5%;
+    color: aliceblue;
+    font-size: 10px;
+  }
+  .buttonAñadir{
+    background-color:black;
+    border-radius: 4px;
+    padding: 4.5%;
+    color: aliceblue;
+    font-size: 10px;
+  }
+  
+  .waiterList{
+    background-color: rgba(48, 31, 16, 1);
+    width: 250px;
+    height: 600px;
+    color: aliceblue;
+    font-size: 10px;
+    border-radius: 6px;
+  }
