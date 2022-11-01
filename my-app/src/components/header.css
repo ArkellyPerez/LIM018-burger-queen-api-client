@@ -1,0 +1,44 @@
+img{
+    max-width:100%;
+    max-height: 100%;
+  }
+  .imgLogo{
+    display: flex;
+    height: 5rem;
+    width: 20rem;
+    padding: 0rem;
+  }
+  .imgSalir{
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .userSection{
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    padding: 0rem;
+  }
+
+  .greetingContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .greeting{
+    font-size: 1.5rem;
+    padding: 0.5rem 0rem 0rem 0rem;
+    }
+    .imgUser{
+      height:25rem;
+      width: 28rem;
+    }
+
+    .userName{
+    
+      font-size: 1.5rem;
+   
+
+  
+    }
+  

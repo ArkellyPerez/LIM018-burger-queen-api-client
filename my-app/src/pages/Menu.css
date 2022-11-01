@@ -1,0 +1,291 @@
+:root {
+  --brown: #9D7261;
+  --brown1: #CCB19D;
+  --orange1: #F0A28E;
+  --brown2: #675741;
+  --black: #000000;
+  --brown3: #BA8A6A;
+  --white: #FFFFFE;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(160, 134, 123, 1);
+  /* width: 100px;
+  height: 130px; */
+  width: 10rem;
+  height: 17rem;
+  color: aliceblue;
+  /* font-size: 10px; */
+  border-radius: 6px;
+  border-color:20px rgb(154, 55, 9);
+  border:2rem;
+  margin: 0.5rem;
+  margin-block-end: 1rem;
+  overflow: hidden;
+}
+
+
+.productName {
+  background-color: rgb(245, 220, 120);
+  color:black;
+  border-radius: 4px;
+  padding: 0.1rem;
+  height: 4rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ButonDeleteItem{
+  background-color: transparent;
+  border-style: none;
+   height: 3rem; 
+ 
+}
+.waiterOptionsMenu {
+  display: flex;
+  padding: 1rem;
+  margin: 2rem;
+  list-style-type: none;
+}
+
+.waiterButtonsMenu {
+  margin: 1rem;
+  list-style: none;
+  display: inline;
+
+
+}
+
+.headerViews {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0rem;
+  background-color: BLACK;
+  color: white;
+}
+
+.waiterBody,
+.viewWaiterPedidos {
+  display: flex;
+  flex-direction: row;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+ .pedidosMenuView{
+    background-color: rgba(243, 143, 143, 0.8);
+    background-size: cover;
+  } 
+
+
+
+.waiterContainer {
+  background-color: rgba(9, 4, 1, 0.3);
+  margin: 0rem 1rem;
+  height: 70vh;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  overflow:auto;
+}
+
+.waiterContainer::-webkit-scrollbar {
+  width: 8px;     /* Tamaño del scroll en vertical */
+  height: 8px;    /* Tamaño del scroll en horizontal */
+  display: none;   
+}
+  .waiterContainer::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /*  Ocultar scroll */
+
+  background: #5e2b2b;
+ border-radius: 3rem;
+}
+
+
+
+.waiterOptions {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: flex-start;
+  padding:0.5rem 0rem;
+  margin: 0.3rem;
+}
+
+.datos {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+  margin: 1rem 0rem;
+
+}
+
+input::placeholder {
+  color: rgb(65, 64, 64);
+
+}
+.text{
+  background-color:rgb(251, 249, 248, 0.5);
+  border-style:none;
+  margin: 0.3rem;
+  padding: 0.3rem 2rem;
+  border-radius: 1rem;
+}
+ 
+.waiterButtons{
+  margin-top:2rem;
+  margin: 0rem 0.5rem;
+  width: 10rem;
+  border-style:solid;
+  border-color:  rgba(48, 31, 16, 1);
+  border-width: medium;
+  background-color: rgba(48, 31, 16, 1);
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  text-decoration: none;
+}
+
+.waiterButtons:hover {
+  background-color: rgb(245, 220, 120);
+  color:rgba(48, 31, 16, 1);
+}
+
+.typeMenu {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  background-color: rgba(48, 31, 16, 1);
+  color: aliceblue;
+  padding: 1.5% 30%;
+  font-size: 10px;
+  border-radius: 6px;
+}
+
+.waiterMenu {
+  background-color: rgba(101, 42, 27, 1);
+  border-radius: 6px;
+  padding: 2.5%;
+  width: 100px;
+  color: aliceblue;
+  font-size: 10px;
+}
+
+.menuConstainer {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+ }
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(160, 134, 123, 1);
+  width: 10rem;
+  height: 15rem;
+  color: aliceblue;
+  border-radius: 6px;
+  border-color: rgb(239, 239, 245);
+  margin: 0.5rem;
+  margin-block-end: 1rem;
+}
+.productCost {
+
+  color: aliceblue;
+  font-size: 12px;
+}
+
+ img {
+  max-width: 80%;
+  max-height: 80%;
+} 
+
+.imgProduct {
+
+  border-radius: 4px;
+  padding: 4.5%;
+  color: aliceblue;
+  font-size: 10px;
+}
+
+.buttonAñadir {
+  background-color: black;
+  border-radius: 4px;
+  padding: 4.5%;
+  color: aliceblue;
+  font-size: 10px;
+}
+
+
+.buttonAñadir:hover {
+  color:rgb(245, 220, 120);
+  border-color: rgb(245, 220, 120);
+  border-style: solid;
+}
+
+.waiterList {
+ /*overflow: scroll;
+   background-color: rgba(9, 4, 1, 0.3);
+  width: 100vh;
+  margin: 0rem 1rem;
+  padding: 1.5rem;
+  color: aliceblue;
+  font-size: 2.5rem;
+  border-radius: 1rem; */
+  background-color: rgba(9, 4, 1, 0.3);
+  margin: 0rem 1rem;
+  height: 70vh;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: aliceblue;
+  font-size: 2.5rem;
+  border-radius: 1rem;
+  overflow-y:scroll;
+ 
+  /* overflow-y:visible;
+  overflow-y:scroll; */
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+th, td{
+  border-radius:  0.5rem;
+  font-size: 1.5rem;
+}
+
+table {
+  background-color:rgb(251, 249, 248, 0.3);
+  width: 100%;
+  border-radius:  1rem;
+  border-collapse: separate;
+  padding: 1rem;
+  font-size: 3rem;
+  color: black;
+ 
+
+}
+
+.btnsMenu{
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,143 +1,402 @@
 {
-    "post": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" },
-
-    "user": [
-      {
-        "_id": "1",
-        "email": "maria@gmail.com",
-        "password": "123456",
-        "nombre": "Maria Fernandez",
-        "roles": "waiter",
-        "admin": false
-      },
-      {
-        "_id": "2",
-        "email": "mariano@gmail.com",
-        "password": "123456",
-        "nombre": "Mariano Fernandez",
-        "roles":"waiter",
-        "admin": false
-      },
-      {
-        "_id": "3",
-        "email": "mario@gmail.com",
-        "password": "123456",
-        "nombre": "Mario Fernandez",
-        "roles":"chef",
-        "admin": false
-      },
-      {
-        "_id": "4",
-        "email": "mariana@gmail.com",
-        "password": "123456",
-        "nombre": "Mariana Fernandez",
-        "roles": "administrador",
-        "admin": true
-      }
-    ],
-    "products": [
-      {
-        "_id": "1",
-        "name": "Café americano",
-        "price": 5,
-        "image": "https://cdn-icons-png.flaticon.com/512/3361/3361135.png",
-        "type": "desayuno",
-        "dateEntry": ""
-      },
-      {
-        "_id": "2",
-        "name": "Café con leche",
-        "price": 7,
-        "image": "https://cdn-icons-png.flaticon.com/512/1485/1485863.png",
-        "type": "desayuno",
-        "dateEntry": ""
-      },
-      {
-        "_id": "3",
-        "name": "Sandwich de jamón y queso",
-        "price": 10,
-        "image": "https://cdn-icons-png.flaticon.com/512/1625/1625062.png",
-        "type": "desayuno",
-        "dateEntry": ""
-      },
-      {
-        "_id": "4",
-        "name": "Jugo de frutas natural",
-        "price": 7,
-        "image": "https://cdn-icons-png.flaticon.com/512/3258/3258200.png",
-        "type": "desayuno",
-        "dateEntry": ""
-      },
-      {
-        "_id": "5",
-        "name": "Hamburguesa simple",
-        "price": 10,
-        "image": "https://cdn-icons-png.flaticon.com/512/2617/2617019.png",
-        "type": "tentempié",
-        "dateEntry": ""
-      },
-      {
-        "_id": "6",
-        "name": "Hamburguesa doble",
-        "price": 15,
-        "image": "https://cdn-icons-png.flaticon.com/512/4459/4459373.png",
-        "type": "tentempié",
-        "dateEntry": ""
-      },
-      {
-        "_id": "7",
-        "name": "Papas fritas",
-        "price": 5,
-        "image": "https://cdn-icons-png.flaticon.com/512/5787/5787020.png",
-        "type": "tentempié",
-        "dateEntry": ""
-      },
-      {
-        "_id": "8",
-        "name": "Aros de cebolla",
-        "price": 5,
-        "image": "https://cdn-icons-png.flaticon.com/512/3351/3351055.png",
-        "type": "tentempié",
-        "dateEntry": ""
-      },
-      {
-        "_id": "9",
-        "name": "Agua 500ml",
-        "price": 5,
-        "image": "https://cdn-icons-png.flaticon.com/512/8008/8008926.png",
-        "type": "tentempié",
-        "dateEntry": ""
-      },
-      {
-        "_id": "10",
-        "name": "Agua 750ml",
-        "price": 7,
-        "image": "https://cdn-icons-png.flaticon.com/512/3629/3629850.png",
-        "type": "tentempié",
-        "dateEntry": ""
-      },
-      {
-        "_id": "11",
-        "name": "Bebida/gaseosa 500ml",
-        "price": 7,
-        "image": "https://cdn-icons-png.flaticon.com/512/1046/1046782.png",
-        "type": "tentempié",
-        "dateEntry": ""
-      },
-      {
-        "_id": "12",
-        "name": "Bebida/gaseosa 750ml",
-        "price": 10,
-        "image": "https://cdn-icons-png.flaticon.com/512/920/920592.png",
-        "type": "tentempié",
-        "dateEntry": ""
-      }
-    ]
-    
-  }
+  "post": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "user": [
+    {
+      "_id": "1",
+      "email": "maria@gmail.com",
+      "password": "123456",
+      "nombre": "Maria Fernandez",
+      "roles": "waiter",
+      "admin": false
+    },
+    {
+      "_id": "2",
+      "email": "mariano@gmail.com",
+      "password": "123456",
+      "nombre": "Mariano Fernandez",
+      "roles": "waiter",
+      "admin": false
+    },
+    {
+      "_id": "3",
+      "email": "mario@gmail.com",
+      "password": "123456",
+      "nombre": "Mario Fernandez",
+      "roles": "chef",
+      "admin": false
+    },
+    {
+      "_id": "4",
+      "email": "mariana@gmail.com",
+      "password": "123456",
+      "nombre": "Mariana Fernandez",
+      "roles": "administrador",
+      "admin": true
+    }
+  ],
+  "products": [
+    {
+      "_id": "1-Café americano",
+      "name": "Café americano",
+      "price": 5,
+      "image": "https://cdn-icons-png.flaticon.com/512/3361/3361135.png",
+      "type": "desayuno",
+      "dateEntry": ""
+    },
+    {
+      "_id": "2-Café con leche",
+      "name": "Café con leche",
+      "price": 7,
+      "image": "https://cdn-icons-png.flaticon.com/512/1485/1485863.png",
+      "type": "desayuno",
+      "dateEntry": ""
+    },
+    {
+      "_id": "3-Sandwich de jamón y queso",
+      "name": "Sandwich de jamón y queso",
+      "price": 10,
+      "image": "https://cdn-icons-png.flaticon.com/512/1625/1625062.png",
+      "type": "desayuno",
+      "dateEntry": ""
+    },
+    {
+      "_id": "4-Jugo de frutas natural",
+      "name": "Jugo de frutas natural",
+      "price": 7,
+      "image": "https://cdn-icons-png.flaticon.com/512/3258/3258200.png",
+      "type": "desayuno",
+      "dateEntry": ""
+    },
+    {
+      "_id": "5-Hamburguesa simple",
+      "name": "Hamburguesa simple",
+      "price": 10,
+      "image": "https://cdn-icons-png.flaticon.com/512/2617/2617019.png",
+      "type": "tentempié",
+      "dateEntry": ""
+    },
+    {
+      "_id": "6-Hamburguesa doble",
+      "name": "Hamburguesa doble",
+      "price": 15,
+      "image": "https://cdn-icons-png.flaticon.com/512/4459/4459373.png",
+      "type": "tentempié",
+      "dateEntry": ""
+    },
+    {
+      "_id": "7-Papas fritas",
+      "name": "Papas fritas",
+      "price": 5,
+      "image": "https://cdn-icons-png.flaticon.com/512/5787/5787020.png",
+      "type": "tentempié",
+      "dateEntry": ""
+    },
+    {
+      "_id": "8-Aros de cebolla",
+      "name": "Aros de cebolla",
+      "price": 5,
+      "image": "https://cdn-icons-png.flaticon.com/512/3351/3351055.png",
+      "type": "tentempié",
+      "dateEntry": ""
+    },
+    {
+      "_id": "9-Agua 500ml",
+      "name": "Agua 500ml",
+      "price": 5,
+      "image": "https://cdn-icons-png.flaticon.com/512/8008/8008926.png",
+      "type": "tentempié",
+      "dateEntry": ""
+    },
+    {
+      "_id": "10-Agua 750ml",
+      "name": "Agua 750ml",
+      "price": 7,
+      "image": "https://cdn-icons-png.flaticon.com/512/3629/3629850.png",
+      "type": "tentempié",
+      "dateEntry": ""
+    },
+    {
+      "_id": "11-Bebida/gaseosa 500ml",
+      "name": "Bebida/gaseosa 500ml",
+      "price": 7,
+      "image": "https://cdn-icons-png.flaticon.com/512/1046/1046782.png",
+      "type": "tentempié",
+      "dateEntry": ""
+    },
+    {
+      "_id": "12-Bebida/gaseosa 750ml",
+      "name": "Bebida/gaseosa 750ml",
+      "price": 10,
+      "image": "https://cdn-icons-png.flaticon.com/512/920/920592.png",
+      "type": "tentempié",
+      "dateEntry": ""
+    },
+    {
+      "_id": "12-Bebida/gaseosa 750ml1",
+      "name": "Bebida/gaseosa 750ml1",
+      "price": 110,
+      "image": "https://cdn-icons-png.flaticon.com/512/920/920592.png",
+      "type": "tentempié",
+      "dateEntry": ""
+    }
+  ],
+  "orders": [
+    {
+      "_id": 1,
+      "userId": "26/10/2022 23:32:50-CARLOS",
+      "client": "CARLOS/mesa:3",
+      "products": [
+        {
+          "product": "7-Papas fritas",
+          "qty": 2
+        },
+        {
+          "product": "6-Hamburguesa doble",
+          "qty": 1
+        },
+        {
+          "product": "3-Sandwich de jamón y queso",
+          "qty": 1
+        },
+        {
+          "product": "12-Bebida/gaseosa 750ml",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "26/10/2022, 23:32:50",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 2,
+      "userId": "26/10/2022 23:34:58-SOFIA",
+      "client": "SOFIA/mesa:1",
+      "products": [
+        {
+          "product": "4-Jugo de frutas natural",
+          "qty": 1
+        },
+        {
+          "product": "5-Hamburguesa simple",
+          "qty": 2
+        },
+        {
+          "product": "9-Agua 500ml",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "26/10/2022, 23:34:58",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 3,
+      "userId": "27/10/2022 00:23:13-JUAN",
+      "client": "JUAN/mesa:5",
+      "products": [
+        {
+          "product": "2-Café con leche",
+          "qty": 1
+        },
+        {
+          "product": "1-Café americano",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "27/10/2022, 00:23:13",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 4,
+      "userId": "27/10/2022 00:42:50-undefined",
+      "client": "undefined/mesa:undefined",
+      "products": [
+        {
+          "product": "4-Jugo de frutas natural",
+          "qty": 1
+        },
+        {
+          "product": "3-Sandwich de jamón y queso",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "27/10/2022, 00:42:50",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 5,
+      "userId": "27/10/2022 01:20:11-Mariana",
+      "client": "Mariana/mesa:8",
+      "products": [
+        {
+          "product": "3-Sandwich de jamón y queso",
+          "qty": 1
+        },
+        {
+          "product": "2-Café con leche",
+          "qty": 1
+        },
+        {
+          "product": "1-Café americano",
+          "qty": 1
+        },
+        {
+          "product": "9-Agua 500ml",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "27/10/2022, 01:20:11",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 6,
+      "userId": "27/10/2022 01:28:07-Carlos",
+      "client": "Carlos/mesa:11",
+      "products": [
+        {
+          "product": "3-Sandwich de jamón y queso",
+          "qty": 1
+        },
+        {
+          "product": "4-Jugo de frutas natural",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "27/10/2022, 01:28:07",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 7,
+      "userId": "27/10/2022 09:12:54-PEDRO CHAVEZ",
+      "client": "PEDRO CHAVEZ/mesa:4",
+      "products": [
+        {
+          "product": "1-Café americano",
+          "qty": 1
+        },
+        {
+          "product": "2-Café con leche",
+          "qty": 1
+        },
+        {
+          "product": "10-Agua 750ml",
+          "qty": 1
+        },
+        {
+          "product": "9-Agua 500ml",
+          "qty": 1
+        },
+        {
+          "product": "12-Bebida/gaseosa 750ml",
+          "qty": 2
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "27/10/2022, 09:12:54",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 8,
+      "userId": "27/10/2022 09:35:48-undefined",
+      "client": "undefined/mesa:undefined",
+      "products": [
+        {
+          "product": "3-Sandwich de jamón y queso",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "27/10/2022, 09:35:48",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 9,
+      "userId": "27/10/2022 09:36:59-undefined",
+      "client": "undefined/mesa:undefined",
+      "products": [
+        {
+          "product": "3-Sandwich de jamón y queso",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "27/10/2022, 09:36:59",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 10,
+      "userId": "27/10/2022 09:37:31-undefined",
+      "client": "undefined/mesa:undefined",
+      "products": [
+        {
+          "product": "3-Sandwich de jamón y queso",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "27/10/2022, 09:37:32",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 11,
+      "userId": "27/10/2022 09:37:40-undefined",
+      "client": "undefined/mesa:undefined",
+      "products": [
+        {
+          "product": "3-Sandwich de jamón y queso",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "27/10/2022, 09:37:41",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 12,
+      "userId": "27/10/2022 09:45:25-MARIANA GARCIA",
+      "client": "MARIANA GARCIA/mesa:9",
+      "products": [
+        {
+          "product": "3-Sandwich de jamón y queso",
+          "qty": 3
+        },
+        {
+          "product": "4-Jugo de frutas natural",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "27/10/2022, 09:45:25",
+      "dateProcessed": ""
+    },
+    {
+      "_id": 13,
+      "userId": "29/10/2022 17:26:20-undefined",
+      "client": "undefined/mesa:undefined",
+      "products": [],
+      "status": "pending",
+      "dateEntry": "29/10/2022, 17:26:20",
+      "dateProcessed": ""
+    }
+  ]
+}
