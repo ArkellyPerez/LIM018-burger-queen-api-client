@@ -33,22 +33,22 @@ export const  WEntregados = () => {
     <div className='areaEntregados'>
       {ordersArray.map((order) => (
       <div className='pendienteCard' key={order.id}>
-      <div className='datosCard'>
-        <div>
-          <p> Fecha: {order.dateEntry} </p>
-          <p> Cliente: {order.client.split('/',1)} </p>
-        </div>
-        <div>
-          <p> Nro de Mesa: </p>
-          <p> Nº {order.client.split(':')[1]}</p>
-        </div>
-      </div>
-      <br/>
-      <div>
         <div className='estadoPedido'>
-        <h1>Pedido Nº {order.id}</h1>
-        <h2 className='statusOrder'>{order.status.toUpperCase()}</h2>
+          <div className='datosCard'>
+            <h1>Pedido Nº {order.id}</h1>
+            <p> Nro de Mesa: Nº {order.client.split(':')[1]} </p>
+            <p> Cliente: {order.client.split('/',1)} </p>
+            <p> Fecha Ingreso: {order.dateEntry} </p>
+            {/* <p> Pedido preparado en: {parseInt((new Date(order.dateDelivering)-new Date(order.dateEntry))/1000/60)} min</p> */}
+            <p> Pedido Entregado: {order.dateProcessed}</p>
+          </div>
+          <div className='statusOrderEntregado'>
+              <h2>¡ENTREGADO!</h2>
+              <img className="cronometro" src="https://cdn-icons-png.flaticon.com/512/3877/3877672.png" alt="ir a pendientes"/>
+              <p className="fechaDelivered">{parseInt((new Date(order.dateProcessed)-new Date(order.dateEntry))/1000/60)} min</p>
+          </div>
         </div>
+      <div>
         <table className='tableOrder'>
         <thead>
             <tr className="rowHead">
@@ -66,13 +66,12 @@ export const  WEntregados = () => {
           </tr>
             ))}
           </tbody>
-
         </table>
-
-        <p className="fechaDelivered">ENTREGADO EN {parseInt((new Date(order.dateProcessed)-new Date(order.dateEntry))/1000/60)} MINUTOS</p>
-        <p className="fechaDelivering">LISTO EN {parseInt((new Date(order.dateDelivering)-new Date(order.dateEntry))/1000/60)} MINUTOS</p>
-        <p className="fechaDelivering">(ENTREGADO: {order.dateProcessed})</p>
-        {/* <input type="submit" className="btnWaiterEntregar" onClick={(event)=>changeStatus(event.target.dataset.id)} data-id={order.id} value="ᐊ DELIVERING"></input>        */}
+        <div className='btns'>
+          <div type="submit" className="btnChefPreparados" onClick={(event)=>changeStatus(event.target.dataset.id)} data-id={order.id}>
+            <img className="enviarIMGchefPend" src="https://cdn-icons-png.flaticon.com/512/5166/5166419.png" alt="ir a pendientes"/>ENVIAR A PREPARADOS 
+          </div>       
+        </div>
       </div>
     </div>
       ))}

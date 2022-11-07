@@ -35,10 +35,10 @@ export const ChefPendientes = () => {
       <div className='pendienteCard' key={order.id}>
         <div className='estadoPedido'>
           <h1>Pedido Nº {order.id}</h1>
-          <h2 className='statusOrder'>POR PREPARAR</h2>
+          <h2 className='statusOrder'>EN PROCESO</h2>
         </div>
       <div>
-        <div className='datosCard'>
+        <div className='datosCardPendiente'>
           <div>
             <p> Fecha: {order.dateEntry} </p>
             <p> Cliente: {order.client.split('/',1)} </p>
@@ -48,6 +48,7 @@ export const ChefPendientes = () => {
             <p> Nº {order.client.split(':')[1]}</p>
           </div>
       </div>
+      <br/>
         <table className='tableOrder'>
         <thead>
             <tr className="rowHead">
@@ -67,7 +68,9 @@ export const ChefPendientes = () => {
           </tbody>
         </table>
         <div className='btns'>
-          <input type="submit" className="btnWaiterEntregar" onClick={(event)=>changeStatus(event.target.dataset.id)} data-id={order.id} value="DELIVERING ᐅ"></input>   
+          <div type="submit" className="btnChefPendientes" onClick={(event)=>changeStatus(event.target.dataset.id)} data-id={order.id}>
+            ENVIAR A PREPARADOS <img className="enviarIMGchefPend" src="https://cdn-icons-png.flaticon.com/128/5166/5166431.png" alt="preparadoOK"/> 
+          </div>
         </div>
       </div>
     </div>

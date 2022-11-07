@@ -3,7 +3,7 @@ export const Footer = () => {
 return(
 <div className="footer">
     <div className='copyrigth'>Copyrigth</div> 
-    <div className='copyrigth'>  @ArkellyPerez - @VanessaArapa</div>
+    <div className='copyrigth'>  @ArkellyPerez - @VaneArapa</div>
 </div>
 )
 }

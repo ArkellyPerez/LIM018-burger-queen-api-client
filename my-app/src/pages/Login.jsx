@@ -26,29 +26,17 @@ let rol;
                         //const tokenSaved = localStorage.getItem('llave') //para obtener la var
                         // guardar el token: se puede guardar en el localStorage o en el sessionStorage
                         // tener en cuenta que la mejor man era es en una cookie
-                        console.log(res.data.token)
-                        const s = jwt_decode(res.data.token)
-                        console.log(s.roles.mesero)
-                        if (s.roles.mesero == true) {
-                            rol='mesero'
-                            localStorage.setItem('rol',rol);
-                            console.log("s.roles==true")
-                            console.log("busand", res)
-                            localStorage.setItem('correo', correo)//guardo en locaStorage el correo
-                            document.getElementById("viewLogin").style.display = "none";
-                            navigate("/Menu")
-                            // navigate(1)
-                            //window.location = '/Menu'; // cambiar y usar useNavigate
-                            // return {Menu()};
-                        } else if (s.roles.chef == true) {
-                            console.log("estoy en la vista chef")
-                            rol='chef'
-                            localStorage.setItem('rol',rol);
-                            navigate("/Chef/ChefPendientes")
-                          
+                        const tokenSaved = localStorage.getItem('llave');
+                        const user = jwt_decode(tokenSaved);
+                        // console.log(jwt_decode(res.data.token)) // PARA OH ////////////////////////////
+                        console.log("busand",res)
+                        localStorage.setItem('correo', correo)//guardo en locaStorage el correo
+                        document.getElementById("viewLogin").style.display = "none";
+                        if(user.roles.mesero===true){
+                        navigate("/Menu")
+                        } else if(user.roles.chef===true){
+                            navigate("/Menu/ChefPendientes")  
                         }
-
-
                     } else if (res.status === 400) {
                         setLogin("false");
                         seterrorMessage("El usuario o contraseña son incorrectos...");
@@ -62,9 +50,6 @@ let rol;
                 })
         }
     }
-
-
-
     return (  //return html y antes de return logica js
         <div className='viewLogin' id='viewLogin'>
             <div className='spaceLogin'>

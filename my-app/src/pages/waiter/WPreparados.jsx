@@ -33,23 +33,24 @@ export const WPreparados = () => {
     <div className='areaPreparados'>
       {ordersArray.map((order) => (
       <div className='pendienteCard' key={order.id}>
-      <div className='datosCard'>
-        <div>
-          <p> Fecha: {order.dateEntry} </p>
-          <p> Cliente: {order.client.split('/',1)} </p>
-        </div>
-        <div>
-          <p> Nro de Mesa: </p>
-          <p> Nº {order.client.split(':')[1]}</p>
-        </div>
-      </div>
-      <br/>
-      <div>
         <div className='estadoPedido'>
-        <h1>Pedido Nº {order.id}</h1>
-        <h2 className='statusOrder'>{order.status.toUpperCase()}</h2>
+          <div className='datosCard'>
+            <h1>Pedido Nº {order.id}</h1>
+            <p> Mesa: Nº {order.client.split(':')[1]}</p>
+            <p> Cliente: {order.client.split('/',1)} </p>
+            <p> Fecha Ingreso: {order.dateEntry} </p>
+            <p> Pedido Listo: {order.dateDelivering}</p>
+
+          </div>
+          <div className='statusOrderPreparado'>
+            <h2>¡LISTO!</h2>
+            <img className="cronometro" src="https://cdn-icons-png.flaticon.com/512/3877/3877672.png" alt="ir a pendientes"/>
+            <p className="fechaDelivered">{parseInt((new Date(order.dateDelivering)-new Date(order.dateEntry))/1000/60)} min</p>
+
+          </div>
         </div>
-        <table className='tableOrder'>
+      <div>
+         <table className='tableOrder'>
         <thead>
             <tr className="rowHead">
               <th className="rowHeadTable">Código</th>
@@ -67,10 +68,11 @@ export const WPreparados = () => {
             ))}
           </tbody>
         </table>
-        <p className="fechaDelivered">LISTO EN {parseInt((new Date(order.dateDelivering)-new Date(order.dateEntry))/1000/60)} MINUTOS</p>
-        <p className="fechaDelivering">(PREPARADO: {order.dateDelivering})</p>
-
-        <input type="submit" className="btnWaiterEntregar" onClick={(event)=>changeStatus(event.target.dataset.id)} data-id={order.id} value=" DELIVERED ᐅ"></input>       
+        <div className='btns'>
+         <div type="submit" className="btnChefPendientes" onClick={(event)=>changeStatus(event.target.dataset.id)} data-id={order.id}>
+            ENVIAR A ENTREGADOS <img className="enviarIMGwaitPrep" src="https://cdn-icons-png.flaticon.com/128/5166/5166431.png" alt="ir a Entregador"/> 
+         </div>       
+        </div>
       </div>
     </div>
       ))}

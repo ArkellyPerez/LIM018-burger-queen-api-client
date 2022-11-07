@@ -25,7 +25,7 @@ export const Header = () => {
     <div className="headerViews" id="menu">
       <div className="userSection">
         {/* <div className="imageUser"> */}
-        <img src={imgUser} alt="imgUser" />
+        <img className="userImage" src="https://cdn-icons-png.flaticon.com/512/4490/4490403.png" alt="imgUser" />
         {/* </div> */}
         <div className="greetingContainer">
           <div className="greeting">Hola!</div>
@@ -33,8 +33,8 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className="imgLogo"><img src={whitelogo} alt="logo"></img></div>
-      <div className="imgSalir" onClick={() => logout()}> <img src={salir} alt="loginout"></img>
+      <div className="imgLogo"><img src="https://static.takeaway.com/images/restaurants/fr/R0R0R5R1/logo_465x320.png" alt="logo"></img></div>
+      <div className="imgSalir" onClick={() => logout()}> <img className="cerrarSesion" src="https://cdn-icons-png.flaticon.com/512/6062/6062709.png" alt="loginout"></img>
         {/* <button><img src={salir} alt="loginout" onClick={closeSesion() } /></button>    */}
 
         {/* <li href="">Cerrar sesión</li> */}

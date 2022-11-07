@@ -140,7 +140,7 @@ export const Menu = () => {
           {productosMenuArray.map((producto) => (
             <div className="product" key={producto._id}>
               <div className="productName">{producto.name}</div>
-              <div className="productCost">`S/{producto.price}`</div>
+              <div className="productCost">S/{producto.price}</div>
               <div className="imgProduct">
                 <img src={producto.image} alt="sanwich"></img>
               </div>
