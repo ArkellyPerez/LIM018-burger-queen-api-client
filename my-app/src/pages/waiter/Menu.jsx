@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { productsGet, orderPost } from '../../helpers/api'
 import './Menu.css'
+import {Modal} from '../../components/Modal'
 
 export const Menu = () => {
   const [productosMenuArray, setProductosMenuArray] = useState([])
@@ -98,17 +99,29 @@ export const Menu = () => {
           qty: item.quantity,
         })
     })
+    // console.log(cliente===undefined)
+    // console.log(cliente !== undefined)
+    // const clienteOk=`${cliente}/mesa:${mesa}`;
+    const clienteName = (cliente !== undefined)?(cliente.trim() === ""):true;
+    const mesaName = (mesa !== undefined)?(mesa.trim() === ""):true;
+    const clienteFinal=(clienteName||mesaName)?"":`${cliente}/mesa:${mesa}`;
+
+    // const clienteFinal=(cliente.trim() === ""||mesa.trim() === ""||clienteOk.includes('undefined');
+    console.log(clienteFinal)
     const resumenPedido = {
       userId: `${today.toLocaleString()}-${cliente}`, // si queremos despues modificar por un numero en el id
       // client: `${cliente}/mesa:${mesa} : ${totalOrder} SOLES`,
-      client: `${cliente}/mesa:${mesa}`,
+      // client: `${cliente}/mesa:${mesa}`,
+      client: clienteFinal,
       products: productsAndQty
     }
     //console.log(resumenPedido)
     orderPost(localStorage.getItem('llave'), resumenPedido)
       .then((res) => {
         if (res.status === 200) {
-          alert('Su pedido fue agregado exitosamente.')
+          // alert('Su pedido fue agregado exitosamente.')
+          const modalPage = document.getElementById("modalPage")
+          modalPage.style.display = 'flex';
           cleanPedido()
         } 
         // else if(res.status === 400){
@@ -117,7 +130,12 @@ export const Menu = () => {
         //   alert(' No hay cabecera de autenticación.') 
         // }
       })
-      .catch((err) => { alert(err.response.data) })
+      .catch((err) => {
+        // Modal("Poceso cancelado","ERROR");
+        const modalPage = document.getElementById("modalPage2");
+        modalPage.style.display = 'flex';
+        // alert(err.response.data) 
+      })
   }
 
   function cleanPedido() {

@@ -105,6 +105,8 @@
 
  .pedidosMenuView{
     background-color: rgba(243, 143, 143);
+    position: absolute;
+    width: 100vw;
     height: 100vh;
   } 
 

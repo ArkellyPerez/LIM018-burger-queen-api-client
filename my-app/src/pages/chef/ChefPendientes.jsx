@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { ordersGet,orderPutChef } from '../../helpers/api'
-
+// import {Modal} from '../../components/Modal'
 
 export const ChefPendientes = () => {
   const tokenSaved = localStorage.getItem('llave');
@@ -21,7 +21,9 @@ export const ChefPendientes = () => {
     orderPutChef(tokenSaved,idOrder)
     .then((res) => {
       if (res.status === 200) {
-        alert('El pedido está listo:)')
+        const modalPage = document.getElementById("modalPage")
+        modalPage.style.display = 'flex';
+        // Modal("OKS","OK")
         setChangeStatus(`delivering -${idOrder}`)
       } 
     })
@@ -29,7 +31,8 @@ export const ChefPendientes = () => {
   }
 
   return (
-    <div className='areaPendientes3'>
+    <>
+     <div className='areaPendientes3'>
     <div className='areaPendientes'>
       {ordersArray.map((order) => (
       <div className='pendienteCard' key={order.id}>
@@ -76,6 +79,8 @@ export const ChefPendientes = () => {
     </div>
       ))}
     </div>
-    </div>
+     </div>
+    </>
+
   )
 }

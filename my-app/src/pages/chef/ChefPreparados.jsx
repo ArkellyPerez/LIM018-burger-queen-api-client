@@ -20,7 +20,9 @@ export const ChefPreparados = () => {
     orderPutChefReverse(tokenSaved,idOrder)
     .then((res) => {
       if (res.status === 200) {
-        alert('El estado del Pedido pasó de DELIVERING a PENDING...')
+        // alert('El estado del Pedido pasó de DELIVERING a PENDING...')
+        const modalPage = document.getElementById("modalPage")
+        modalPage.style.display = 'flex';
         setChangeStatus(`delivered -${idOrder}`)
       } 
     })

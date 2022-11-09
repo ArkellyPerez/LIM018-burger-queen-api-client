@@ -21,7 +21,10 @@ export const WPreparados = () => {
     orderPut(tokenSaved,idOrder)
     .then((res) => {
       if (res.status === 200) {
-        alert('El pedido fue entregado :)')
+        // alert('El pedido fue entregado :)')
+        const modalPage = document.getElementById("modalPage")
+        modalPage.style.display = 'flex';
+        
         setChangeStatus(`delivered -${idOrder}`)
       } 
     })

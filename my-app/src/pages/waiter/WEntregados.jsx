@@ -22,7 +22,9 @@ export const  WEntregados = () => {
     orderPutReverse(tokenSaved,idOrder)
     .then((res) => {
       if (res.status === 200) {
-        alert('El estado del Pedido pasó de DELIVERED a DELIVERING...')
+        // alert('El estado del Pedido pasó de DELIVERED a DELIVERING...')
+        const modalPage = document.getElementById("modalPage")
+        modalPage.style.display = 'flex';
         setChangeStatus(`delivering -${idOrder}`)
       } 
     })
